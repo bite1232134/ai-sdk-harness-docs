@@ -1,0 +1,60 @@
+---
+title: AI SDK Harness
+description: 通过 AI SDK 使用成熟的智能体 harness。
+---
+
+# AI SDK Harness
+
+harness 章节介绍 AI SDK 的 harness 抽象：一套用于运行 Claude Code、Codex 和 Pi
+等成熟智能体 harness 的统一 API。
+
+<IndexCards
+  cards={[
+    {
+      title: '概览',
+      description:
+        '了解 harness 与 provider、模型、智能体、流以及 UI 基础组件之间的关系。',
+      href: '/zh/01-overview',
+    },
+    {
+      title: 'HarnessAgent',
+      description:
+        '创建会话、运行回合、管理沙箱生命周期，并恢复 harness 对话。',
+      href: '/zh/02-harness-agent',
+    },
+    {
+      title: '工具',
+      description:
+        '使用内置 harness 工具、由宿主执行的 AI SDK 工具、审批以及沙箱感知的执行。',
+      href: '/zh/03-tools',
+    },
+    {
+      title: '技能',
+      description: '向 harness 运行时提供可复用的指令包。',
+      href: '/zh/04-skills',
+    },
+    {
+      title: 'harness 适配器',
+      description: '了解可用的 harness 适配器。',
+      href: '/zh/05-harness-adapters',
+    },
+    {
+      title: '工作流工具',
+      description:
+        '将 HarnessAgent 回合作为持久化的 Workflow DevKit 工作流运行。',
+      href: '/zh/06-workflow-utilities',
+    },
+    {
+      title: 'UI',
+      description:
+        '将 harness 输出流式传输到 useChat，并构建可保留 harness 会话的聊天路由。',
+      href: '/zh/07-ui',
+    },
+    {
+      title: '终端界面',
+      description:
+        '借助一个小型会话适配器，在 @ai-sdk/tui 中运行 HarnessAgent。',
+      href: '/zh/08-terminal-ui',
+    },
+  ]}
+/>
