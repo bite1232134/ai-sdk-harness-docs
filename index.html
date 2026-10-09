@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="Vercel AI SDK — AI SDK Harnesses 章节文档原文镜像（HarnessAgent）">
+  <title>AI SDK Harnesses 原文 · HarnessAgent</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
+  <style>
+    :root { --theme-color: #0070f3; }
+    .markdown-section { max-width: 900px; }
+    .markdown-section pre > code { font-size: 13px; line-height: 1.5; }
+    .markdown-section table { display: table; width: 100%; }
+    .sidebar { width: 300px; }
+    body.close .sidebar { transform: translateX(-300px); }
+    body.close .content { left: 0; }
+    @media screen and (min-width: 768px) {
+      .sidebar { width: 300px; }
+      .content { left: 300px; }
+    }
+    .notice {
+      background: #f6f8fa; border-left: 4px solid #0070f3;
+      padding: 10px 14px; margin: 1em 0; font-size: 14px; color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">加载中…</div>
+
+  <script>
+    window.$docsify = {
+      name: 'AI SDK Harnesses 原文',
+      repo: 'bite1232134/ai-sdk-harness-docs',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      maxLevel: 3,
+      // 原文文件是 .mdx，这里让 Docsify 直接按 .mdx 取文件
+      ext: '.mdx',
+      homepage: '/docs/ai-sdk-harnesses/index.mdx',
+      notFoundPage: true,
+      search: {
+        maxAge: 86400000,
+        paths: ['/docs/ai-sdk-harnesses/']
+      },
+      plugins: [
+        function (hook) {
+          // 去掉 mdx 顶部的 frontmatter（--- title: ... ---），避免渲染成一堆横线
+          hook.beforeEach(function (markdown) {
+            return markdown
+              .replace(/^\uFEFF/, '')
+              .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+          });
+        }
+      ]
+    };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+</body>
+</html>
